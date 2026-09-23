@@ -17,6 +17,7 @@ export const teacherInfo = {
   instagramUrl: "https://www.instagram.com/ateliercoursmaths/",
   photo: "[PHOTO PROFESSEURE]",
   schedule: "[HORAIRES]",
+  neighborhood: "[QUARTIER]",
 };
 
 interface MethodStep {
@@ -32,6 +33,16 @@ interface ProcessStep {
 
 interface Goal {
   title: string;
+}
+
+interface ExerciseCategory {
+  title: string;
+  description: string;
+}
+
+interface Testimonial {
+  quote: string;
+  author: string;
 }
 
 export interface LangContent {
@@ -102,6 +113,30 @@ export interface LangContent {
   footer: {
     tagline: string;
     links: string[];
+  };
+    demo: {
+    heading: string;
+    subheading: string;
+    note: string;
+    cardTitle: string;
+    cardCategory: string;
+    cardLevel: string;
+    viewButton: string;
+    statementLabel: string;
+    statementPlaceholder: string;
+    showCorrection: string;
+    correctionLabel: string;
+    correctionPlaceholder: string;
+  };
+  exercises: {
+    heading: string;
+    subheading: string;
+    categories: ExerciseCategory[];
+  };
+  testimonials: {
+    heading: string;
+    items: Testimonial[];
+    editNote: string;
   };
 }
 
@@ -191,6 +226,83 @@ export const content: Record<Lang, LangContent> = {
         { title: "Prendre confiance en mathématiques" },
       ],
     },
+        demo: {
+      heading: "Un aperçu d'un exercice",
+      subheading:
+        "Découvrir une façon simple et structurée d'aborder un exercice de mathématiques.",
+      note: "Exemple de présentation d'un exercice avec sa correction.",
+      cardTitle: "Exercice type",
+      cardCategory: "Fonctions",
+      cardLevel: "Niveau 1AS",
+      viewButton: "Voir l'exercice",
+      statementLabel: "Énoncé",
+      statementPlaceholder:
+        "Déterminer les variations de la fonction et interpréter le résultat.",
+      showCorrection: "Afficher la correction",
+      correctionLabel: "Correction",
+      correctionPlaceholder:
+        "On identifie d'abord les informations données, puis on applique la méthode étape par étape.",
+    },
+
+    exercises: {
+      heading: "Des exercices pour progresser",
+      subheading:
+        "S'entraîner régulièrement permet de mieux comprendre le cours et de gagner en autonomie.",
+      categories: [
+        {
+          title: "Algèbre",
+          description:
+            "Expressions algébriques, équations et calculs pour consolider les bases.",
+        },
+        {
+          title: "Fonctions",
+          description:
+            "Lire, comprendre et étudier une fonction à travers des exercices progressifs.",
+        },
+        {
+          title: "Géométrie",
+          description:
+            "Appliquer les propriétés et méthodes de géométrie avec des exercices guidés.",
+        },
+        {
+          title: "Statistiques",
+          description:
+            "Comprendre les données, les représentations et les indicateurs statistiques.",
+        },
+        {
+          title: "Probabilités",
+          description:
+            "S'entraîner à raisonner et résoudre des situations simples de probabilités.",
+        },
+        {
+          title: "Préparation aux contrôles",
+          description:
+            "Réviser les notions importantes et s'entraîner dans des conditions proches du contrôle.",
+        },
+      ],
+    },
+
+    testimonials: {
+      heading: "Un accompagnement qui fait la différence",
+      items: [
+        {
+          quote: "[Témoignage à ajouter]",
+          author: "[Prénom — Élève / Parent]",
+        },
+        {
+          quote: "[Témoignage à ajouter]",
+          author: "[Prénom — Élève / Parent]",
+        },
+        {
+          quote: "[Témoignage à ajouter]",
+          author: "[Prénom — Élève / Parent]",
+        },
+      ],
+      editNote: "Les témoignages seront ajoutés prochainement.",
+    },
+
+
+
     parents: {
       heading: "Un accompagnement pensé aussi pour les parents.",
       subheading: "Une communication claire, à chaque étape du parcours.",
@@ -287,6 +399,80 @@ export const content: Record<Lang, LangContent> = {
         { title: "التحضير للفروض" },
         { title: "اكتساب الثقة في الرياضيات" },
       ],
+    },
+        demo: {
+      heading: "نموذج عن تمرين",
+      subheading:
+        "اكتشف طريقة بسيطة ومنظمة للتعامل مع تمرين في الرياضيات.",
+      note: "مثال توضيحي لطريقة عرض تمرين مع تصحيحه.",
+      cardTitle: "تمرين نموذجي",
+      cardCategory: "الدوال",
+      cardLevel: "مستوى 1AS",
+      viewButton: "عرض التمرين",
+      statementLabel: "نص التمرين",
+      statementPlaceholder:
+        "حدد تغيرات الدالة ثم فسّر النتيجة.",
+      showCorrection: "إظهار التصحيح",
+      correctionLabel: "التصحيح",
+      correctionPlaceholder:
+        "نحدد أولًا المعطيات، ثم نطبق المنهجية خطوة بخطوة.",
+    },
+
+    exercises: {
+      heading: "تمارين تساعد على التقدم",
+      subheading:
+        "التدرب بانتظام يساعد على فهم الدرس بشكل أفضل واكتساب الاستقلالية.",
+      categories: [
+        {
+          title: "الجبر",
+          description:
+            "التعابير الجبرية، المعادلات والحسابات لترسيخ الأساسيات.",
+        },
+        {
+          title: "الدوال",
+          description:
+            "قراءة وفهم ودراسة الدوال من خلال تمارين تدريجية.",
+        },
+        {
+          title: "الهندسة",
+          description:
+            "تطبيق خصائص وقواعد الهندسة من خلال تمارين موجهة.",
+        },
+        {
+          title: "الإحصاء",
+          description:
+            "فهم المعطيات والتمثيلات والمؤشرات الإحصائية.",
+        },
+        {
+          title: "الاحتمالات",
+          description:
+            "التدرب على التفكير وحل مسائل بسيطة في الاحتمالات.",
+        },
+        {
+          title: "التحضير للفروض",
+          description:
+            "مراجعة المفاهيم المهمة والتدرب في ظروف قريبة من الفرض.",
+        },
+      ],
+    },
+
+    testimonials: {
+      heading: "مرافقة تصنع الفرق",
+      items: [
+        {
+          quote: "[أضف الشهادة هنا]",
+          author: "[الاسم — تلميذ(ة) / ولي أمر]",
+        },
+        {
+          quote: "[أضف الشهادة هنا]",
+          author: "[الاسم — تلميذ(ة) / ولي أمر]",
+        },
+        {
+          quote: "[أضف الشهادة هنا]",
+          author: "[الاسم — تلميذ(ة) / ولي أمر]",
+        },
+      ],
+      editNote: "ستتم إضافة الشهادات لاحقًا.",
     },
     parents: {
       heading: "مرافقة مصممة أيضًا لأولياء الأمور.",
