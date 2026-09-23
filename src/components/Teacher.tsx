@@ -20,7 +20,7 @@ export default function Teacher() {
           whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           viewport={{ once: true, margin: "-15%" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="sticky top-28"
+          className="relative md:sticky md:top-28"
         >
           <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[28px] bg-gradient-to-br from-indigo-soft to-sage-soft shadow-card">
             <div className="prof-image">
