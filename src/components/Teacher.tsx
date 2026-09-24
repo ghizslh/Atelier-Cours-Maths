@@ -24,15 +24,21 @@ export default function Teacher() {
         >
           <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[28px] bg-gradient-to-br from-indigo-soft to-sage-soft shadow-card">
             <div className="prof-image">
-              <img 
+              <img
                 src={`${import.meta.env.BASE_URL}prof.png`}
                 alt="Professeure de mathématiques"
-            </div> 
+              />
+            </div>
           </div>
-          <p className="mt-4 font-display text-xl text-ink">{teacherInfo.firstName}</p>
-          <p className="text-sm text-ink/50">{teacherInfo.city}</p>
-        </motion.div>
 
+          <p className="mt-4 font-display text-xl text-ink">
+            {teacherInfo.firstName}
+          </p>
+
+          <p className="text-sm text-ink/50">
+            {teacherInfo.city}
+          </p>
+        </motion.div>
         <div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
