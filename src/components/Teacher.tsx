@@ -25,7 +25,7 @@ export default function Teacher() {
           <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[28px] bg-gradient-to-br from-indigo-soft to-sage-soft shadow-card">
             <div className="prof-image">
               <img 
-                src="publique/prof.png" 
+                src="public/prof.png" 
                 alt="Professeure de mathématiques"/>
             </div> 
           </div>
