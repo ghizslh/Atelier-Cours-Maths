@@ -25,8 +25,8 @@ export default function Teacher() {
           <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[28px] bg-gradient-to-br from-indigo-soft to-sage-soft shadow-card">
             <div className="prof-image">
               <img 
-                src="public/prof.png" 
-                alt="Professeure de mathématiques"/>
+                src={`${import.meta.env.BASE_URL}prof.png`}
+                alt="Professeure de mathématiques"
             </div> 
           </div>
           <p className="mt-4 font-display text-xl text-ink">{teacherInfo.firstName}</p>
